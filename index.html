@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Le Chocolat</title>
     <!-- Required meta tags always come first -->
@@ -8,16 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- Bootstrap CSS 
-    If we remove this then no css classes from bootstrap will be avialable -->
+    If we remove this then no css classes from bootstrap will be available 
+    if we use the same class then the last will conquer. 
+    If we add new values to the same class then all rules will be added ??? NO
+    It is a better practice to use external Bootstrap (from a CDN) rather than locally instaled
+    because it will be faster. 
+    Better put our own stylesheet under the bootstrap in order to overwrite them!!
+    Order inside the class="first second", class="second first" does not matter. 
+    What changes the precedence of the CSS rules is the order in which they are contained inside the CSS files.-->
+
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
-
     <header class="jumbotron">
         <div class="container">
-            <div class="row">
+            <div class="row row-header">
                 <div class="col-12 col-sm-8">
                     <h1>Le Chocolat</h1>
                     <p>We combine experience with creativity to create innovative tastes based on classic chocolate
@@ -31,7 +38,7 @@
 
     <div class="container">
         <!--first row-->
-        <div class="row flex-row-reverse">
+        <div class="row row-content flex-row-reverse align-items-center">
             <div class="col-sm-4 col-md-3">
                 <h3>Our famous chocolates</h3>
             </div>
@@ -42,7 +49,7 @@
         </div>
 
         <!--second row-->
-        <div class="row ">
+        <div class="row row-content align-items-center">
             <div class="col-sm-4 col-md-3">
                 <h3>WEEK’S OFFER</h3>
             </div>
@@ -53,7 +60,7 @@
         </div>
 
         <!--third row-->
-        <div class="row flex-row-reverse">
+        <div class="row row-content flex-row-reverse align-items-center">
             <div class="col-sm-4 col-md-3">
                 <h3>Meet our Specialists</h3>
             </div>
@@ -66,10 +73,11 @@
         </div>
     </div>
 
-    <footer>
+    <footer class = "footer">
         <div class="container">
-            <div class="row">
-                <div class="offset-2 col-5 col-sm-2">
+            <div class="row ">
+                <!-- Menu footer column-->
+                <div class="offset-1 col-5 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
@@ -78,6 +86,7 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
+                <!-- Address footer column-->
                 <div class="col-6 col-sm-5">
                     <h5>Our Address</h5>
                     <address>
@@ -89,7 +98,8 @@
                         Email: <a href="mailto:chocolat@nomail.net">chocolat@nomail.net</a>
                     </address>
                 </div>
-                <div class="col col-sm-4">
+                <!-- Social Links footer column-->
+                <div class="col col-sm-4 align-self-center" style="text-align: center">
                     <div>
                         <a href="http://google.com/+">Google+</a>
                         <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
@@ -100,8 +110,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-auto">
-                <div>
+
+            <!--This is a copyright paragraph.-->
+            <div class="row justify-content-center">
+                <div class="col-auto">
+            <!--This is &copy for the symbol of copyright.
+            So to place a euro sign, you will need to paste &euro;-->
                     <p> &copy; Copyright 2018 Le Chocolat</p>
                 </div>
             </div>
