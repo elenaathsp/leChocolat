@@ -25,3 +25,11 @@ address{
     margin:0px;
     color:#0f0f0f;
 }
+
+body{
+    padding:50px 0px 0px 0px;
+    z-index:0;
+}
+.bg-light {
+    background-color: #dbb08d !important;
+}
