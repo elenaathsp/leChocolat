@@ -33,3 +33,12 @@ body{
 .bg-light {
     background-color: #dbb08d !important;
 }
+
+.table .thead-dark th{
+    color:floralwhite;
+    background-color:#6E3F19
+}
+
+/*hover is a css pseudo class that control events*/
+
+tr:hover {background-color:#dbb08db0!important}
