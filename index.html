@@ -28,7 +28,7 @@
     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
         <div class="container">
             <!--Logo-->
-            <a class="navbar-brand" href="#">Le Chocolat</a>
+            <a class="navbar-brand" href="./index.html"><img src="images/logo.png" height="40" width="54"></a>
             <!--Sandwich button-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
@@ -61,7 +61,9 @@
                         based on classic chocolate
                         recipes. Our creations will travel you in the chocolate world!</p>
                 </div>
-                <div class="col col-sm-4"> Logo
+                <div class="col col-sm-4">
+                    <!--the class image fluid makes the image responsive-->
+                    <img src="images/logo.png" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -74,12 +76,19 @@
                 <h3>Our famous chocolates</h3>
             </div>
             <div class="col-sm col-md">
-                <h2>85% DARK CHOCOLATE</h2>
+                <!--                 <h2>85% DARK CHOCOLATE</h2>
                 <p class="d-none d-sm-block">Dark chocolate with no added sugar. Here you can taste the flavor of cocoa
-                    beans.</p>
+                    beans.</p> -->
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="images/dark85.jpg" alt="85% DARK CHOCOLATE">
+                    <div class="media-body">
+                        <h2 class="mt-0">85% DARK CHOCOLATE</h2>
+                        <p class="col d-none d-md-block">Dark chocolate with no added sugar.
+                            Here you can taste the flavor of cocoa beans.</p>
+                    </div>
+                </div>
             </div>
         </div>
-
         <!--second row-->
         <div class="row row-content align-items-center">
             <div class="col-sm-4 col-md-3">
@@ -97,12 +106,21 @@
                 <h3>Meet our Specialists</h3>
             </div>
             <div class="col-sm col-md">
-                <h2>Vasilis Wilson </h2>
+                <!--                 <h2>Vasilis Wilson </h2>
                 <h4>Sous-chef</h4>
                 <p class="d-none d-sm-block">Vasilis is well informed of all the current trends in pastry and
                     contributes his innovative ideas in
-                    our products.</p>
+                    our products.</p> -->
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="images/cartoonVasilis.png" alt="Vasilis Wilson">
+                    <div class="media-body">
+                        <h2 class="mt-0">Vasilis Wilson</h2>
+                        <p class="col d-none d-md-block">Vasilis is well informed of all the current
+                            trends in pastry and contributes his innovative ideas in our products.</p>
+                    </div>
+                </div>
             </div>
+
         </div>
 
         <!--Table-->
