@@ -30,6 +30,8 @@
             <!--Logo-->
             <a class="navbar-brand" href="./index.html"><img src="images/logo.png" height="40" width="54"></a>
             <!--Sandwich button-->
+            <!--The span, anchor and  image tag is an inline element, 
+                they do not use new line, as much space as needed for the content-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -86,6 +88,11 @@
                             <span class="badge badge-danger">HOT</span>
                             <span class="badge badge-pill badge-success">$0.99</span>
                         </h2>
+                        <!--The p tag is an block element, 
+                they use new line and they take full width. 
+                We can set display:inline css rule, but the default is to take a new line.
+                The float css property places elements like wrapping in word document, left or right
+                and you have to declare width and height-->
                         <p class="col d-none d-md-block">Dark chocolate with no added sugar.
                             Here you can taste the flavor of cocoa beans.</p>
                     </div>
