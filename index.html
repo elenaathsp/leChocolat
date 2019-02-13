@@ -47,7 +47,8 @@
                         <a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a>
+                        <a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>
+                            Contact</a>
                     </li>
                 </ul>
             </div>
@@ -179,70 +180,153 @@
             </div>
         </div>
 
-    </div>
-    <footer class="footer">
-        <div class="container">
-            <div class="row ">
-                <!-- Menu footer column-->
-                <div class="offset-1 col-5 col-sm-2">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./aboutus.html">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="./contactus.html">Contact</a></li>
-                    </ul>
-                </div>
-                <!-- Address footer column-->
-                <div class="col-6 col-sm-5">
-                    <h5>Our Address</h5>
-                    <address>
-                        121, Clear Wave Road<br>
-                        Clear Wave Road, Aloha<br>
-                        HAWAII<br>
-                        <!-- se auta vazoume i tag gia na einai pio simpiknwmena-->
-                        <i class="fa fa-phone fa-lg"></i>: +987 6543 2100 <br>
-                        <i class="fa fa-fax fa-lg"></i>: +987 6543 2101 <br>
-                        <i class="fa fa-envelope fa-lg"></i>:
-                        <!-- edw anchor tag gia na einai link-->
-                        <a href="mailto: chocolat@nomail.net"> chocolat@nomail.net </a>
-                    </address>
-                </div>
-                <!-- Social Links footer column-->
-                <div class="col col-sm-4 align-self-center" style="text-align: center">
-                    <div>
-                        <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+">
-                            <i class="fa fa-google-plus"></i></a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id=">
-                            <i class="fa fa-facebook"></i></a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/">
-                            <i class="fa fa-linkedin"></i></a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/">
-                            <i class="fa fa-twitter"></i></a>
-                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/">
-                            <i class="fa fa-youtube"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:">
-                            <i class="fa fa-envelope-o"></i></a>
+
+        <!--Reservation Form-->
+
+        <div class="row justify-content-center">
+            <div class="col-12 md-8 mt-3 mb-3">
+                <div class="card">
+                    <div class="card-header text-white bg-warning font-weight-bold align-middle">
+                        Reserve your baskets
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group row">
+
+                                <label for="noofbaskets" class="col-md-5 col-form-label">Number of baskets</label>
+                                <div class="col-md-7">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                            value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                            value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                            value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">3</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                            value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">4</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                            value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">5</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                            value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">6</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="dateandtime" class="col-md-5 col-form-label">Date and Time</label>
+                                <div class="col-auto">
+                                    <label class="sr-only" for="inlineFormInputGroup1">Date</label>
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                                <div class="input-group-text"><i class="fa fa-calendar" ></i></div> 
+                                        </div>
+                                        <input type="text" class="form-control" id="inlineFormInputGroup1" placeholder="dd-----yyyy">
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <label class="sr-only" for="inlineFormInputGroup2">Time</label>
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            
+                                            <div class="input-group-text"><i class="fa fa-clock-o" ></i></div> 
+                                        </div>
+                                        <input type="text" class="form-control" id="inlineFormInputGroup2" placeholder="--:-- --">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                </div>
+                            </div>
+
+
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!--This is a copyright paragraph.-->
-            <div class="row justify-content-center">
-                <div class="col-auto">
-                    <!--This is &copy for the symbol of copyright.
+        <!-- <h5 class="card-title">Special title treatment</h5> -->
+        <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row ">
+                    <!-- Menu footer column-->
+                    <div class="offset-1 col-5 col-sm-2">
+                        <h5>Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./aboutus.html">About</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="./contactus.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Address footer column-->
+                    <div class="col-6 col-sm-5">
+                        <h5>Our Address</h5>
+                        <address>
+                            121, Clear Wave Road<br>
+                            Clear Wave Road, Aloha<br>
+                            HAWAII<br>
+                            <!-- se auta vazoume i tag gia na einai pio simpiknwmena-->
+                            <i class="fa fa-phone fa-lg"></i>: +987 6543 2100 <br>
+                            <i class="fa fa-fax fa-lg"></i>: +987 6543 2101 <br>
+                            <i class="fa fa-envelope fa-lg"></i>:
+                            <!-- edw anchor tag gia na einai link-->
+                            <a href="mailto: chocolat@nomail.net"> chocolat@nomail.net </a>
+                        </address>
+                    </div>
+                    <!-- Social Links footer column-->
+                    <div class="col col-sm-4 align-self-center" style="text-align: center">
+                        <div>
+                            <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+">
+                                <i class="fa fa-google-plus"></i></a>
+                            <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id=">
+                                <i class="fa fa-facebook"></i></a>
+                            <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/">
+                                <i class="fa fa-linkedin"></i></a>
+                            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/">
+                                <i class="fa fa-twitter"></i></a>
+                            <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/">
+                                <i class="fa fa-youtube"></i></a>
+                            <a class="btn btn-social-icon" href="mailto:">
+                                <i class="fa fa-envelope-o"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--This is a copyright paragraph.-->
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <!--This is &copy for the symbol of copyright.
             So to place a euro sign, you will need to paste &euro;-->
-                    <p> &copy; Copyright 2018 Le Chocolat</p>
+                        <p> &copy; Copyright 2018 Le Chocolat</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/tether/dist/js/tether.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/tether/dist/js/tether.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 
