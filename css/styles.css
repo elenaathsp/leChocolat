@@ -49,3 +49,8 @@ tr:hover {background-color:#dbb08db0!important}
     border-bottom: 1px solid #ddd;
     padding: 10px;
   }
+
+
+  #modalClicker {
+    cursor: pointer;
+}

@@ -30,13 +30,15 @@
             <!--Logo-->
             <a class="navbar-brand" href="./index.html"><img src="images/logo.png" height="40" width="54"></a>
             <!--Sandwich button-->
-            <!--The span, anchor and  image tag is an inline element, 
-                they do not use new line, as much space as needed for the content-->
+            <!--The span, anchor and image tag is an inline element, 
+                they do not use new line, as much space as needed for the content.
+            Also, the anchor tag  uses a different cursor at hover by default -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="Navbar">
-                <ul class="navbar-nav">
+
+                <ul class="navbar-nav mr-auto class">
                     <li class="nav-item active">
                         <a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a>
                     </li>
@@ -49,16 +51,70 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>
                             Contact</a>
-                    </li>
+                    </li>   
                 </ul>
+
+                <span class="navbar-text">
+                    <a id="modalClicker" data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
+
             </div>
         </div>
     </nav>
 
+    <!--The modal element-->
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail3">Email
+                                address
+                            </label>
+                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
+                                placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputPassword3">
+                                Password
+                            </label>
+                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox">
+                                Remember me
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        Sign in
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Header-->
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header align-items-center">
 
+                <!--Description-->
                 <div class="col-12 col-sm-6">
                     <h1>Le Chocolat</h1>
                     <p class="d-none d-sm-block">We combine experience with creativity to create innovative tastes
@@ -66,26 +122,35 @@
                         recipes. Our creations will travel you in the chocolate world!</p>
                 </div>
 
+                <!--Big Logo-->
                 <div class="col col-sm-3">
                     <!--the class image fluid makes the image responsive-->
                     <img src="images/logo.png" class="img-fluid">
                 </div>
 
+                <!--Reserve href button-->
                 <div class="col col-sm-3">
-                        <a class="btn btn-warning btn-sm" href="#reserve-form" >Reserve your basket</a>
-                    </div>
+                    <!-- <a class="btn btn-warning btn-sm" href="#reserve-form">Reserve your basket</a> -->
+                    <a type="button" class="btn btn-warning btn-sm btn-block" data-toggle="tooltip" data-html="true"
+                        title="Or Call us at <br><strong>+ 987 6543 2100</strong>" data-placement="bottom" href="#reserve-form">
+                        Reserve your baskets
+                    </a>
+                </div>
+
             </div>
         </div>
     </header>
 
+    <!--Main Content-->
     <div class="container">
+
         <!--first row-->
         <div class="row row-content flex-row-reverse align-items-center">
             <div class="col-sm-4 col-md-3">
                 <h3>Our famous chocolates</h3>
             </div>
             <div class="col-sm col-md">
-                <!--                 <h2>85% DARK CHOCOLATE</h2>
+                <!--<h2>85% DARK CHOCOLATE</h2>
                 <p class="d-none d-sm-block">Dark chocolate with no added sugar. Here you can taste the flavor of cocoa
                     beans.</p> -->
                 <div class="media">
@@ -186,14 +251,13 @@
             </div>
         </div>
 
-
         <!--Reservation Form-->
         <div class="row row-content justify-content-center">
             <div class="col-12 col-sm-8 mt-3 mb-3">
                 <div class="card border-default">
 
                     <!--card header-->
-                    <div class="card-header bg-warning" id = "reserve-form">
+                    <div class="card-header bg-warning" id="reserve-form">
                         <h3 class="font-weight-bold text-white m-0">Reserve your baskets</h3>
                     </div>
 
@@ -289,70 +353,78 @@
             </div>
         </div>
 
-        <!--Footer-->
-        <footer class="footer">
-            <div class="container">
-                <div class="row ">
-                    <!-- Menu footer column-->
-                    <div class="offset-1 col-5 col-sm-2">
-                        <h5>Links</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./aboutus.html">About</a></li>
-                            <li><a href="#">Menu</a></li>
-                            <li><a href="./contactus.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <!-- Address footer column-->
-                    <div class="col-6 col-sm-5">
-                        <h5>Our Address</h5>
-                        <address>
-                            121, Clear Wave Road<br>
-                            Clear Wave Road, Aloha<br>
-                            HAWAII<br>
-                            <!-- se auta vazoume i tag gia na einai pio simpiknwmena-->
-                            <i class="fa fa-phone fa-lg"></i>: +987 6543 2100 <br>
-                            <i class="fa fa-fax fa-lg"></i>: +987 6543 2101 <br>
-                            <i class="fa fa-envelope fa-lg"></i>:
-                            <!-- edw anchor tag gia na einai link-->
-                            <a href="mailto: chocolat@nomail.net"> chocolat@nomail.net </a>
-                        </address>
-                    </div>
-                    <!-- Social Links footer column-->
-                    <div class="col col-sm-4 align-self-center" style="text-align: center">
-                        <div>
-                            <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+">
-                                <i class="fa fa-google-plus"></i></a>
-                            <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id=">
-                                <i class="fa fa-facebook"></i></a>
-                            <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/">
-                                <i class="fa fa-linkedin"></i></a>
-                            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/">
-                                <i class="fa fa-twitter"></i></a>
-                            <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/">
-                                <i class="fa fa-youtube"></i></a>
-                            <a class="btn btn-social-icon" href="mailto:">
-                                <i class="fa fa-envelope-o"></i></a>
-                        </div>
-                    </div>
-                </div>
+    </div>
 
-                <!--This is a copyright paragraph.-->
-                <div class="row justify-content-center">
-                    <div class="col-auto">
-                        <!--This is &copy for the symbol of copyright.
-            So to place a euro sign, you will need to paste &euro;-->
-                        <p> &copy; Copyright 2018 Le Chocolat</p>
+    <!--Footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row ">
+                <!-- Menu footer column-->
+                <div class="offset-1 col-5 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="./contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Address footer column-->
+                <div class="col-6 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+                        121, Clear Wave Road<br>
+                        Clear Wave Road, Aloha<br>
+                        HAWAII<br>
+                        <!-- se auta vazoume i tag gia na einai pio simpiknwmena-->
+                        <i class="fa fa-phone fa-lg"></i>: +987 6543 2100 <br>
+                        <i class="fa fa-fax fa-lg"></i>: +987 6543 2101 <br>
+                        <i class="fa fa-envelope fa-lg"></i>:
+                        <!-- edw anchor tag gia na einai link-->
+                        <a href="mailto: chocolat@nomail.net"> chocolat@nomail.net </a>
+                    </address>
+                </div>
+                <!-- Social Links footer column-->
+                <div class="col col-sm-4 align-self-center" style="text-align: center">
+                    <div>
+                        <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+">
+                            <i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id=">
+                            <i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/">
+                            <i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/">
+                            <i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/">
+                            <i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:">
+                            <i class="fa fa-envelope-o"></i></a>
                     </div>
                 </div>
             </div>
-        </footer>
 
-        <!-- jQuery first, then Tether, then Bootstrap JS. -->
-        <script src="node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="node_modules/tether/dist/js/tether.min.js"></script>
-        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+            <!--This is a copyright paragraph.-->
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <!--This is &copy for the symbol of copyright.
+            So to place a euro sign, you will need to paste &euro;-->
+                    <p> &copy; Copyright 2018 Le Chocolat</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
 </body>
 
 
