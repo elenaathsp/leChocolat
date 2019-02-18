@@ -64,7 +64,7 @@
         </div>
     </nav>
 
-    <!--The modal element-->
+    <!--The login modal element-->
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
@@ -130,8 +130,13 @@
                 <!--Reserve href button-->
                 <div class="col col-sm-3">
                     <!-- <a class="btn btn-warning btn-sm" href="#reserve-form">Reserve your basket</a> -->
-                    <a type="button" class="btn btn-warning btn-sm btn-block" data-toggle="tooltip" data-html="true"
+                    <!--                   <a type="button" class="btn btn-warning btn-sm btn-block" data-toggle="tooltip" data-html="true"
                         title="Or Call us at <br><strong>+ 987 6543 2100</strong>" data-placement="bottom" href="#reserve-form">
+                        Reserve your baskets
+                    </a> 
+                    -->
+                    <a type="button" class="btn btn-warning btn-sm btn-block" id="reservationClicker" data-toggle="modal"
+                        data-target="#reservationModal">
                         Reserve your baskets
                     </a>
                 </div>
@@ -146,7 +151,7 @@
         <!--Carousel-->
         <div class="row row-content">
             <div class="col">
-                <div id="mycarousel" class="carousel slide" data-ride="carousel" data-interval = "2000">
+                <div id="mycarousel" class="carousel slide" data-ride="carousel" data-interval="0">
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
                             <img src="images/dark85.jpg" alt="85% DARK CHOCOLATE">
@@ -188,7 +193,7 @@
                         <li data-target="#mycarousel" data-slide-to="1"></li>
                         <li data-target="#mycarousel" data-slide-to="2"></li>
                     </ol>
-                    <a class="carousel-control-prev"  href="#mycarousel" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
@@ -309,18 +314,16 @@
         </div>
 
         <!--Reservation Form-->
-        <div class="row row-content justify-content-center">
-            <div class="col-12 col-sm-8 mt-3 mb-3">
-                <div class="card border-default">
-
-                    <!--card header-->
-                    <div class="card-header bg-warning" id="reserve-form">
-                        <h3 class="font-weight-bold text-white m-0">Reserve your baskets</h3>
+        <!--The reserve your basket modal element-->
+        <div id="reservationModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Reserve your baskets</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times</button>
                     </div>
-
-                    <!--card body-->
-                    <div class="card-body">
-
+                    <div class="modal-body">
                         <form>
 
                             <!--Radio buttons-->
@@ -345,22 +348,22 @@
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                                            value="option2">
+                                            value="option3">
                                         <label class="form-check-label" for="inlineRadio3">3</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
-                                            value="option2">
+                                            value="option4">
                                         <label class="form-check-label" for="inlineRadio4">4</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
-                                            value="option2">
+                                            value="option5">
                                         <label class="form-check-label" for="inlineRadio5">5</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6"
-                                            value="option2">
+                                            value="option6">
                                         <label class="form-check-label" for="inlineRadio6">6</label>
                                     </div>
                                 </div>
@@ -369,7 +372,8 @@
                             <!--Date and Time fields-->
                             <div class="form-group row">
 
-                                <label for="dateandtime" class="col-12 col-sm-3 col-form-label">Date and Time</label>
+                                <label for="dateandtime" class="col-12 col-sm-3 col-form-label">Date
+                                    and Time</label>
 
                                 <!--Date-->
                                 <div class="col-12 col-sm-4">
@@ -396,22 +400,51 @@
 
                             </div>
 
-                            <!--Submit button-->
+                            <!--Home delivery-->
                             <div class="form-group row">
-                                <div class="col">
-                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                <label for="homedelivery" class="col-12 col-sm-3 col-form-label">
+                                    Home Delivery</label>
+
+                                <!--Radio button yer or no-->
+                                <div class="col-12 col-sm-9 btn-group">
+                                        <!--<span class = "btn btn-success">-->
+                                    <div class="form-check form-check-inline btn btn-success mr-0">
+                                        <input class="form-check-input " type="radio" name="inlineyesorno" id="inlineyes"
+                                            value="optionyes" checked="checked">
+                                        <label class="form-check-label " for="inlineyes">Yes</label>
+                                       
+                                    </div>
+
+                                <!--</span>-->
+                                <!--<span class = "btn btn-danger">-->
+                                    <div class="form-check form-check-inline btn btn-danger ml-0 ">
+                                        <input class="form-check-input " type="radio" name="inlineyesorno" id="inlineno"
+                                            value="optionno">
+                                        <label class="form-check-label " for="inlineno">No</label>
+                                    </div>
+                                <!--</span>-->
                                 </div>
+
                             </div>
 
-
                         </form>
+
+
                     </div>
+
+                    <!-- Footer with submit -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            Submit
+                        </button>
+                    </div>
+
                 </div>
             </div>
         </div>
-
     </div>
-
     <!--Footer-->
     <footer class="footer">
         <div class="container">
@@ -471,15 +504,17 @@
         </div>
     </footer>
 
+
+
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
+        //$(function () {
+          //  $('[data-toggle="tooltip"]').tooltip()
+        //})
     </script>
 
 </body>
